@@ -7,7 +7,7 @@ import java.io.File;
  */
 public interface IClassify {
 
-    String classify(String sentence);
+    String classify(String sentence) throws Exception, IllegalAccessException, ClassNotFoundException;
     
     String classify(File file);
 }

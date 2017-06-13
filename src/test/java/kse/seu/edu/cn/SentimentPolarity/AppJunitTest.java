@@ -12,6 +12,7 @@ import kse.seu.edu.cn.classifier.BayesClassifier;
 import kse.seu.edu.cn.classifier.DictClassifier;
 import kse.seu.edu.cn.classifier.KNNClassifier;
 import kse.seu.edu.cn.classifier.MaxEntClassifier;
+import kse.seu.edu.cn.classifier.SVMClassifier;
 import weka.classifiers.Classifier;
 import weka.classifiers.trees.J48;
 import weka.core.Instances;
@@ -147,5 +148,11 @@ public class AppJunitTest {
 	public void testKNN(){
 		KNNClassifier maxent = new KNNClassifier("f_corpus/","ch_waimai_corpus.txt");
 		System.out.println(maxent.classify("这个菜太好吃了"));
+	}
+	
+	@Test
+	public void testSVM(){
+		SVMClassifier svm = new SVMClassifier("f_corpus/","ch_waimai_corpus.txt");
+		System.out.println(svm.classify("这个菜太好吃了"));
 	}
 }
