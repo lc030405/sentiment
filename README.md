@@ -16,7 +16,12 @@ Thanks!
 2. How to use it.
 you can refer to the unit test:kse.seu.edu.cn.SentimentPolarity.AppJunitTest.java.
 first you should get a classifier instance,(new a instance), via the constructor function to set your training text file, 
-every classifier has a "classify" function, you just input a String which you want to know the sentiment polarity.
+every classifier has a "classify" function, you just input a String which you want to know the sentiment polarity:
+  @Test
+	public void testMaxEnt(){
+		MaxEntClassifier maxent = new MaxEntClassifier("f_corpus/","ch_waimai_corpus.txt");
+		System.out.println(maxent.classify("这些食物好吃。"));
+	}
 
 Note: 
 1. the training file: the first character of each line should be "pos" or "neg" to show the sentiment polarity.
