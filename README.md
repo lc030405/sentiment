@@ -1,10 +1,15 @@
 # sentiment
 1. overvoew
 This is a sentiment polarity classifier, which includes:
+
   a. --SVM based libsvm
+  
   b. -- Maximum Entropy
+  
   c. -- Naive Bayesian
+  
   d. -- Classifier only based on the Dictionary
+  
   e. -- K-NN
 
 The sample is shown as a unit test!
